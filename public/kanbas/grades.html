@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grades</title>
+  </head>
+  <body>
+    <table>
+      <tr valign="baseline">
+        <td>
+          <ul>
+            <li><a href="./profile/index.html">Account</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="home-course-navigation.html">Courses</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Inbox</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Studio</a></li>
+            <li><a href="#">Common</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li><a href="home-content.html">Home</a></li>
+            <li><a href="#">Modules</a></li>
+            <li><a href="#">Piazza</a></li>
+            <li><a href="#">Zoom Meetings</a></li>
+            <li><a href="./assignments/index.html">Assignments</a></li>
+            <li><a href="#">Quizzes</a></li>
+            <li><a href="grades.html">Grades</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Panopto Video</a></li>
+            <li><a href="#">Discussions</a></li>
+            <li><a href="#">Announcements</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="#">Rubrics</a></li>
+            <li><a href="#">Outcomes</a></li>
+            <li><a href="#">Collaborations</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li><a href="course-setting.html">Settings</a></li>
+          </ul>
+        </td>
+        <td>
+          <select id="select-one-gradebook">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option selected value="Gradebook">Gradebook</option>
+            <option value="C">C</option>
+          </select>
+          <button type="button">Import</button>
+          <select id="select-one-export">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option selected value="Export">Export</option>
+            <option value="C">C</option>
+          </select>
+          <button type="button">Configure</button>
+          <h3>Students Name</h3>
+          <input id="serach-student-name" placeholder="Search Students" />
+          <h3>Assignment Name</h3>
+          <input id="serach-assignment" placeholder="Search Assignments" />
+          <br />
+          <br />
+          <button type="button">Apply Filters</button>
+          <br />
+          <br />
+          <table border="1" width="100%">
+            <thead>
+              <tr>
+                <th style="font-size: 16px">Student Name</th>
+                <th style="font-size: 16px">
+                  A1 SETUP<br />
+                  Out of 100
+                </th>
+                <th style="font-size: 16px">
+                  A2 HTML<br />
+                  Out of 100
+                </th>
+                <th style="font-size: 16px">
+                  A3 CSS<br />
+                  Out of 100
+                </th>
+                <th style="font-size: 16px">
+                  A2 BOOTSTRAP<br />
+                  Out of 100
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Alice Wang</td>
+                <td>100</td>
+                <td><input type="text" value="100" style="width: 50px;"></td>
+                <td>99</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>Luke Leia</td>
+                <td><input type="text" value="99" style="width: 50px;"></td>
+                <td>100</td>
+                <td>98</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>Stanley Chen</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td><input type="text" value="100" style="width: 50px;"></td>
+              </tr>
+              <tr>
+                <td>Amy Chou</td>
+                <td>100</td>
+                <td>100</td>
+                <td><input type="text" value="99" style="width: 50px;"></td>
+                <td>100</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
