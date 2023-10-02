@@ -1,0 +1,61 @@
+body {
+  display: flex;
+  align-items: start;
+}
+
+.wd-kanbas-navigation {
+  height: 100%;
+}
+
+.wd-kanbas-navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-container {
+    height: 110%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+hr {
+  width: 100%;
+  margin: 0;
+}
+
+.heading {
+  width: 100%;
+  font-size: 30px;
+  padding: 10px 20px;
+}
+
+.sub-heading {
+  width: 100%;
+  font-size: 20px;
+  padding: 0 50px;
+}
+
+.card {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.cards-container {
+    padding-left: 40px;
+}
+
+.fixed-width-card {
+  width: 250px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.course-link {
+  color: #000;
+  text-decoration: none;
+}

@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  align-items: start;
+}
+
+.wd-kanbas-navigation,
+.wd-account-navigation,
+table {
+  height: 100%;
+}
+
+.wd-kanbas-navigation,
+.wd-account-navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wd-account-navigation {
+  flex: 0 0 200px;
+  background-color: white;
+  list-style: none;
+  padding: 10px;
+  width: 190px;
+  margin: 0px;
+  margin-left: 20px;
+}
+.wd-account-navigation li {
+  padding-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.wd-account-navigation li.wd-active {
+  border-left: 2px solid black;
+}
+
+.wd-account-navigation li.wd-active a {
+  color: black;
+}
+
+.wd-account-navigation a {
+  color: red;
+  text-decoration: none;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-heading {
+  width: 100%;
+  padding: 20px 40px;
+}
+
+
+.profile-heading i.fas.fa-bars {
+  margin-right: 10px; 
+}
+
+i.fas.fa-bars {
+  color: red;   
+  font-size: 24px; 
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.profile-details {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-link {
+  text-decoration: none; 
+  color: red; 
+}
+
+hr {
+  width: 100%;  
+  margin: 0; 
+}
+
+.navigation-container {
+  height: 150%;
+}

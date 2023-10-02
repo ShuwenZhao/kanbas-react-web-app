@@ -1,0 +1,168 @@
+body {
+  display: flex;
+  align-items: start;
+}
+
+.wd-kanbas-navigation,
+.wd-course-navigation {
+  height: 100%;
+  overflow-y: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wd-course-navigation {
+  background-color: white;
+  list-style: none;
+  padding: 0px;
+  width: 120px;
+  margin: 0px;
+  margin-left: 20px;
+}
+.wd-course-navigation li {
+  padding-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.wd-course-navigation li.wd-active {
+  border-left: 2px solid black;
+}
+.wd-course-navigation li.wd-active a {
+  color: black;
+}
+
+.wd-course-navigation a {
+  color: red;
+  text-decoration: none;
+}
+
+.navigation-container {
+  height: 150%;
+}
+
+.custom-link {
+  text-decoration: none;
+  color: red;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heading {
+  width: 100%;
+  padding: 20px 0 0 30px;
+}
+
+.sub-heading {
+  width: 100%;
+  font-size: 20px;
+  padding: 0 50px;
+}
+
+.sub-heading p.text {
+  font-size: 15px;
+  color: gray;
+  font-style: italic;
+}
+
+.heading i.fas.fa-bars {
+  margin-right: 10px;
+}
+
+i.fas.fa-bars {
+  color: red;
+  font-size: 24px;
+}
+
+.list-group-item-secondary {
+  height: 40px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.courses-container {
+  width: 100%;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.padded-text {
+  padding: 10px 0 10px 0;
+}
+
+.padded-text-2 {
+  padding: 10px 0 10px 30px;
+}
+
+.padded-chev {
+  padding: 10px 0 10px 15px;
+}
+
+.right-container {
+  padding-left: 50px;
+}
+
+.list-container {
+  width: 100%;
+  background-color: lightgray;
+  color: white;
+  padding: 20px 0 20px 20px;
+}
+
+.right-text-style {
+  text-decoration: none;
+  color: black;
+}
+
+.right-contents-grey-text {
+  color: grey;
+  font-size: 13px;
+}
+
+/* Default styles */
+.navigation-container,
+.flex-container .heading,
+.flex-container .navigation-container {
+  display: block;
+}
+
+/* Hide last column and expand third column */
+@media (max-width: 1000px) {
+  /* Replace with the appropriate breakpoint */
+  .flex-container .heading {
+    display: none;
+  }
+  .flex-container .navigation-container {
+    flex: 1;
+  }
+}
+
+/* Hide first two columns and expand third column */
+@media (max-width: 600px) {
+  /* Replace with the appropriate breakpoint */
+  .navigation-container,
+  .flex-container .navigation-container {
+    display: none;
+  }
+  .flex-container > div {
+    flex: 1;
+  }
+}
