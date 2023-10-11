@@ -1,0 +1,39 @@
+.grade-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 60px 0 0 0;
+}
+.flex-container {
+  margin-bottom: 10px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.gradebook {
+  color: red;
+}
+
+.table-striped tbody tr {
+  border: 1.5px solid #ddd;
+}
+
+.table-striped th:first-child,
+.table-striped td:first-child {
+  text-align: left;
+}
+
+.table-striped td,
+.table-striped th {
+  border: 1.5px solid #ddd;
+  text-align: center;
+  padding: 10px;
+}
+
+.table-striped tbody tr td:first-child {
+  color: red;
+}

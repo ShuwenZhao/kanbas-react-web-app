@@ -1,0 +1,88 @@
+.assignment-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  background-color: #e0e0e0;
+  padding: 10px;
+}
+
+.assignment-header-container h2 {
+    margin-bottom: 0;
+}
+
+.custom-link {
+    color: black;
+    width:100%;
+}
+
+.round-container {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #d4d4d4;
+  font-weight: bold;
+}
+
+.plus-icon {
+  margin-left: 10px;
+}
+
+.assignment-buttons-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.assignment-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 60px 0 0 0;
+}
+
+.assignment-buttons-header button {
+  margin-right: 10px;
+}
+
+.module-menu-icon {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.list-group-item-assign {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-group-item-assign .check-icon {
+  color: green;
+}
+
+.assignment-contents-container {
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.list-group-item-assign {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e0e0e0;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+
+.list-group-item-assign .start-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.list-group-item-assign .end-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}

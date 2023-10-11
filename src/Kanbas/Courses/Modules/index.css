@@ -1,0 +1,58 @@
+.modules-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 60px 0 0 0;
+  border-radius: 5px;
+}
+
+.module-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.module-content-start {
+    align-items: flex-start;
+}
+
+.module-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.module-header button {
+  margin-right: 10px;
+}
+
+.module-menu-icon {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.module-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2em;
+  margin: 10px 0 20px 0;
+  padding: 10px;
+  background-color: lightgray;
+  border-radius: 0px;
+}
+
+.module-icon {
+  margin-right: 10px;
+}
+
+.module-actions {
+  display: flex;
+  align-items: center;
+}
+
+.module-check-icon {
+  color: green;
+  margin-right: 10px;
+}

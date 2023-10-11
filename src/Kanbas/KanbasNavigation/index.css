@@ -1,0 +1,53 @@
+.wd-kanbas-navigation {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: black;
+  list-style: none;
+  padding: 0px;
+  width: 120px;
+  margin: 0px;
+}
+
+.wd-kanbas-navigation .wd-icon {
+  font-size: 2em;
+  color: red;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.wd-kanbas-navigation a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: red;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.wd-kanbas-navigation a.active {
+  background-color: white;
+  color: red;
+}
+
+.wd-kanbas-navigation .account-link,
+.wd-kanbas-navigation .account-link .wd-icon {
+  color: white;
+}
+
+.wd-kanbas-navigation .account-link.active .wd-icon {
+  color: grey;
+}
+
+.school-logo {
+  width: 80%;
+  margin: 20px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

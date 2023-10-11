@@ -1,0 +1,48 @@
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: none;
+}
+
+/* Add the new breadcrumb separator */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  padding: 0 0.5rem; /* Adjust as needed */
+  color: red; /* Adjust as needed */
+}
+
+.breadcrumb-item > a {
+  color: red;
+}
+
+.breadcrumb-item.active {
+  color: red;
+}
+
+.icon-style {
+  margin-right: 25px;
+  font-size: 20px;
+}
+
+.course-name-style {
+  color: red;
+  font-size: 20px;
+}
+
+hr.full-width {
+  width: 82vw;
+  left: 50%;
+  right: 50%;
+}
+
+.student-view-button {
+  padding: 0 0 10px 0;
+}
+
+.student-view-icon {
+  padding-right: 5px;
+}
