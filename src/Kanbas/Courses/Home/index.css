@@ -38,13 +38,22 @@
 .icon-column {
   flex: 0 0 auto;
   margin-right: 20px;
+  color: red;
 }
 
 .content-column {
   flex: 1;
 }
 
+.content-column a {
+  color: red;
+}
+
 .list-group {
   --bs-list-group-border-width: initial;
   --bs-list-group-border-color: initial;
+}
+.list-group-1 {
+  --bs-list-group-border-color:initial;
+  padding-left: initial;
 }

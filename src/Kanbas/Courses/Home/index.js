@@ -9,8 +9,6 @@ import {
   FaStream,
   FaBullhorn,
   FaChartBar,
-  FaCalendarAlt,
-  FaChalkboard,
 } from "react-icons/fa";
 import { ImNotification } from "react-icons/im";
 import "./index.css";
@@ -105,7 +103,7 @@ function Home() {
           <h5>To Do</h5>
           <hr />
           <div className="d-flex justify-content-between align-items-center mb-3">
-            <ul className="list-group">
+            <ul className="list-group-1">
               <li className="list-group-item flex-container">
                 <div className="icon-column">
                   <ImNotification />
