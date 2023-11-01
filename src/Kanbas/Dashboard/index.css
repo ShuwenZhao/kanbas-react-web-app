@@ -1,6 +1,6 @@
 .card-header {
-  background-color: #007bff;
-  color: white;
+  background-color: transparent;
+  color: transparent;
 }
 
 .card {
@@ -22,4 +22,12 @@
 [class^="col-"] {
   display: flex;
   justify-content: center;
+}
+
+.crud-operations {
+  margin-bottom: 30px;
+}
+
+.add-update-buttons{
+  margin-top: 10px;
 }

@@ -56,3 +56,11 @@
   color: green;
   margin-right: 10px;
 }
+
+.crud-operations {
+  margin-bottom: 30px;
+}
+
+.add-update-buttons{
+  margin-top: 10px;
+}
