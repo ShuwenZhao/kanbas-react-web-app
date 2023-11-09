@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import db from "../../Database";
 import { FaEllipsisV, FaCheckCircle } from "react-icons/fa";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { FaTrashAlt } from "react-icons/fa";
 import "./index.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  addAssignment,
-  deleteAssignment,
-  updateAssignment,
-  selectAssignments,
+  addAssignmentAction,
+  deleteAssignmentAction,
+  updateAssignmentAction,
+  setAssignmentsAction,
 } from "./assignmentsReducer";
+import {
+  createAssignment,
+  findAssignmentsForCourse,
+  updateAssignment,
+  deleteAssignment,
+} from "./client";
 
 function Assignments() {
   const { courseId } = useParams();
@@ -25,15 +30,21 @@ function Assignments() {
     (state) => state.assignmentsReducer.assignment
   );
   const dispatch = useDispatch();
+  useEffect(() => {
+    findAssignmentsForCourse(courseId).then((assignments) => {
+      dispatch(setAssignmentsAction(assignments));
+    });
+  }, [courseId, dispatch]);
 
-  const handleDelete = (event, assignmentId) => {
+  const handleDelete = async (event,assignmentId) => {
     event.preventDefault();
     event.stopPropagation();
     const confirmation = window.confirm(
       "Are you sure you want to remove this assignment?"
     );
     if (confirmation) {
-      dispatch(deleteAssignment(assignmentId));
+      await deleteAssignment(assignmentId);
+      dispatch(deleteAssignmentAction(assignmentId));
     }
   };
 

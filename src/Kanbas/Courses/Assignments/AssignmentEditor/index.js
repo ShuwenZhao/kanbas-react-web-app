@@ -2,10 +2,17 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  selectAssignments,
-  addAssignment,
-  updateAssignment,
+  addAssignmentAction,
+  deleteAssignmentAction,
+  updateAssignmentAction,
+  setAssignmentsAction,
 } from "../assignmentsReducer";
+import {
+  createAssignment,
+  findAssignmentsForCourse,
+  updateAssignment,
+  deleteAssignment,
+} from "../client";
 import "./index.css";
 import { FaEllipsisV, FaCheckCircle } from "react-icons/fa";
 import db from "../../../Database";
@@ -27,35 +34,41 @@ function AssignmentEditor() {
       title: "",
       description: "",
       points: "",
-      course: courseId
+      course: courseId,
     }
   );
 
   useEffect(() => {
-    if (assignmentId && assignmentId !== "AssignmentEditor" && currentAssignment) {
+    if (
+      assignmentId &&
+      assignmentId !== "AssignmentEditor" &&
+      currentAssignment
+    ) {
       setLocalAssignment(currentAssignment);
     }
   }, [assignmentId, currentAssignment]);
 
-  const handleSave = () => {
-    const newAssignment = { ...localAssignment, course: courseId };
-    console.log("New Assignment:", newAssignment);
-    if (assignmentId && assignmentId !== "AssignmentEditor") {
-      // Update the assignment in Redux
-      dispatch(updateAssignment(localAssignment));
-    } else {
-      // Add new assignment to Redux with the current course ID
-      const newAssignment = {
-        ...localAssignment,
-        course: courseId,
-      };
-      // Ensure _id is not in the payload
-      delete newAssignment._id;
-
-      console.log("Dispatching addAssignment with:", newAssignment);
-      dispatch(addAssignment(newAssignment));
+  const handleSave = async () => {
+    try {
+      let savedAssignment;
+      if (assignmentId && assignmentId !== "AssignmentEditor") {
+        // Update the assignment in the database and Redux
+        savedAssignment = await updateAssignment(assignmentId, localAssignment);
+        dispatch(updateAssignmentAction(savedAssignment));
+      } else {
+        // Create a new assignment in the database and Redux
+        const newAssignmentData = {
+          ...localAssignment,
+          course: courseId,
+        };
+        delete newAssignmentData._id; 
+        savedAssignment = await createAssignment(courseId, newAssignmentData);
+        dispatch(addAssignmentAction(savedAssignment));
+      }
+      navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+    } catch (error) {
+      console.error("Failed to save assignment:", error);
     }
-    navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
 
   const handleChange = (field, value) => {
