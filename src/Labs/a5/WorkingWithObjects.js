@@ -1,6 +1,10 @@
 import React, { useEffect,useState } from "react";
 import axios from "axios";
+
 function WorkingWithObjects() {
+  const API_BASE = process.env.REACT_APP_API_LAB;
+  const URL = `${API_BASE}`
+
   const [assignment, setAssignment] = useState({
     id: 1,
     title: "NodeJS Assignment",
@@ -9,13 +13,13 @@ function WorkingWithObjects() {
     completed: false,
     score: 0,
   });
-  const URL = "http://localhost:4000/a5/assignment";
+  const URL_ASSIGNMENT = `${URL}/assignment`;
   const fetchAssignment = async () => {
-    const response = await axios.get(`${URL}`);
+    const response = await axios.get(`${URL_ASSIGNMENT}`);
     setAssignment(response.data);
   };
   const updateTitle = async () => {
-    const response = await axios.get(`${URL}/title/${assignment.title}`);
+    const response = await axios.get(`${URL_ASSIGNMENT}/title/${assignment.title}`);
     setAssignment(response.data);
   };
   useEffect(() => {
@@ -27,7 +31,7 @@ function WorkingWithObjects() {
       <h3>Working With Objects</h3>
       <h4>Retrieving Objects</h4>
       <a
-        href="http://localhost:4000/a5/assignment"
+        href="http://localhost:/a5/assignment"
         className="btn btn-primary me-2"
       >
         Get Assignment
@@ -42,7 +46,7 @@ function WorkingWithObjects() {
       <h4>Modifying Properties</h4>
       {/* modifying title */}
       <a
-        href={`${URL}/title/${assignment.title}`}
+        href={`${URL_ASSIGNMENT}/title/${assignment.title}`}
         className="btn btn-primary me-2 float-end"
       >
         Update Title
@@ -63,7 +67,7 @@ function WorkingWithObjects() {
       </button>
       {/* modifying score */}
       <a
-        href={`${URL}/score/${assignment.score}`}
+        href={`${URL_ASSIGNMENT}/score/${assignment.score}`}
         className="btn btn-primary me-2 float-end"
       >
         Update Score
@@ -88,7 +92,7 @@ function WorkingWithObjects() {
       />
       <label for="checkbox1">
         <a
-          href={`${URL}/completed/${assignment.completed}`}
+          href={`${URL_ASSIGNMENT}/completed/${assignment.completed}`}
           className="btn btn-primary me-2 float-end"
         >
           Update Completed

@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function WorkingWithArrays() {
+  const API_BASE = process.env.REACT_APP_API_LAB;
+  const URL = `${API_BASE}`
+
   const [errorMessage, setErrorMessage] = useState(null);
   const [todo, setTodo] = useState({
     id: 1,
@@ -12,7 +15,7 @@ function WorkingWithArrays() {
     completed: false,
   });
 
-  const API = "http://localhost:4000/a5/todos";
+  const API = `${URL}/todos`;
 
   const [todos, setTodos] = useState([]);
   const postTodo = async () => {
