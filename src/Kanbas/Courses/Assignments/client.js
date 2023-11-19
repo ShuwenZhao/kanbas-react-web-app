@@ -20,7 +20,7 @@ export const updateAssignment = async (assignmentId, assignment) => {
   //console.log("With data:", assignment);
   try {
     const response = await axios.put(
-      `http://localhost:4000/api/assignments/${assignmentId}`,
+      `${API_BASE}/assignments/${assignmentId}`,
       assignment
     );
     return response.data;
@@ -32,7 +32,7 @@ export const updateAssignment = async (assignmentId, assignment) => {
 
 export const deleteAssignment = async (assignmentId) => {
   const response = await axios.delete(
-    `http://localhost:4000/api/assignments/${assignmentId}`
+    `${API_BASE}/assignments/${assignmentId}`
   );
   return response.data;
 };
