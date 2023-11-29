@@ -3,18 +3,13 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import "./account.css";
 function Account() {
-  const [account, setAccount] = useState({
-    username: "",
-    firstName: "",
-    lastName: "",
-    dob: "",
-    email: "",
-    role: "USER",
-  });
+  const [account, setAccount] = useState(null);
   const navigate = useNavigate();
   const fetchAccount = async () => {
-    const account = await client.account();
-    setAccount(account);
+    const fetchedAccount = await client.account();
+    if (fetchedAccount) {
+      setAccount(fetchedAccount);
+    }
   };
   const save = async () => {
     await client.updateUser(account);
@@ -27,6 +22,11 @@ function Account() {
   useEffect(() => {
     fetchAccount();
   }, []);
+
+  if (!account) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="account-container">
       <h1>Account</h1>
