@@ -1,11 +1,6 @@
 import Home from "./home";
-import Login from "./login";
 import Signup from "./users/signup";
-import Profile from "./profile";
-import Search from "./search";
-import Details from "./details";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
-import { useState } from "react";
 import UserList from "./users/list";
 import SignIn from "./users/signin";
 import Account from "./users/account";
@@ -41,9 +36,6 @@ function Project() {
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/account" element={<Account />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/search/:search" element={<Search />} />
-            <Route path="/details/:albumId" element={<Details />} />
             <Route path="/users" element={<UserList />} />
             <Route path="/users/table" element={<UserTable />} />
           </Routes>
